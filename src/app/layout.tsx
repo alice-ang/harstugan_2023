@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-import StoryblokProvider from "@/components/StoryblokProvoder";
+import StoryblokProvider from "@/components/StoryblokProvider";
+import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +12,8 @@ export const metadata: Metadata = {
 };
 
 storyblokInit({
-  accessToken: process.env.storyblokApiToken,
+  accessToken: "koy8xqXqglTnVKt10C5lLwtt",
   use: [apiPlugin],
-  apiOptions: {
-    region: "eu",
-  },
 });
 
 export default function RootLayout({

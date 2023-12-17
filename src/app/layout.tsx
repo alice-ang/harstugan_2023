@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import StoryblokProvider from "@/components/blocks/StoryblokProvider";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+import TanStackProvider from "../../providers/TanStackProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <StoryblokProvider>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
+      <TanStackProvider>
+        <html lang="en">
+          <body className={inter.className}>{children}</body>
+        </html>
+      </TanStackProvider>
     </StoryblokProvider>
   );
 }

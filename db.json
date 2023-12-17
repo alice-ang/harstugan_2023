@@ -1,9 +1,48 @@
 {
-  "posts": [
+  "prices": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Klippning",
+      "amount": 440,
+      "isRange": false
+    },
+    {
+      "title": "Luggklipp",
+      "amount": 100,
+      "isRange": false
+    },
+    {
+      "title": "Maskinklipp",
+      "amount": 499,
+      "isRange": true
+    },
+    {
+      "title": "Klippning + bottenfärg",
+      "amount": 980,
+      "isRange": true
+    },
+
+    {
+      "title": "Klippning + 1färg",
+      "amount": 1100,
+      "isRange": true
+    },
+
+    {
+      "title": "Klippning + 1färg",
+      "amount": 1100,
+      "isRange": true
+    },
+
+    {
+      "title": "Klippning + 1färg",
+      "amount": 1100,
+      "isRange": true
+    },
+
+    {
+      "title": "Klippning + 1färg",
+      "amount": 1100,
+      "isRange": true
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Constraints } from "@/components";
+import { Constraints, ImageGrid } from "@/components";
 import { getStoryblokApi } from "@storyblok/react";
 import StoryblokStory from "@storyblok/react/story";
 import Image from "next/image";
@@ -13,14 +13,14 @@ export default async function Home() {
     <main>
       <section className="w-full relative h-[580px]">
         <Image
-          src={"https://source.unsplash.com/random/1920×1030/?fruit"}
+          src={"https://source.unsplash.com/random/1920×1030/?city,night,green"}
           alt="fruit"
           style={{ objectFit: "cover" }}
           fill
           className="w-full h-full top-0 left-0 object-cover"
         />
-        <div className="backdrop-blur-md bg-black/10 md:w-[40%]">
-          Gehlwendljwdnljwen
+        <div className="backdrop-blur-md bg-black/10 md:w-[40%] h-full">
+          <h1 className="uppercase text-6xl">Hårstugan i Nora</h1>
         </div>
       </section>
       <section className=" bg-palette-dark relative">
@@ -95,24 +95,12 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="min-h-[30vh]  py-16">
-        <Constraints>
-          <div className="grid grid-cols-3 gap-4">
-            {[0, 1, 2, 3].map((index) => (
-              <div
-                className="bg-neutral-400 h-[360px] col-span-1 w-full"
-                key={index}
-              />
-            ))}
-            <div className="bg-neutral-400 h-[360px] col-span-2 w-full" />
-          </div>
-        </Constraints>
-      </section>
+      <ImageGrid />
       <footer className="bg-black">
         <Constraints>
           <div className="py-16 flex justify-between">
-            <div className="bg-neutral-400 h-[360px] col-span-2 w-[360px]" />
-            <div className="bg-neutral-400 h-[360px] col-span-2 w-[360px]" />
+            <div className="bg-neutral-400 h-[260px] col-span-2 w-[260px]" />
+            <div className="bg-neutral-400 h-[260px] col-span-2 w-[260px]" />
           </div>
         </Constraints>
 

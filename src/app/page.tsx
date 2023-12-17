@@ -25,11 +25,9 @@ export default async function Home() {
           fill
           className="w-full h-full top-0 left-0 object-cover"
         />
-        <Constraints>
-          <div className="backdrop-blur-md bg-black/10 md:w-[40%] py-24">
-            <h1 className="uppercase text-6xl">Hårstugan i Nora</h1>
-          </div>
-        </Constraints>
+        <div className="backdrop-blur-md bg-black/10 md:w-[40%] flex-col justify-center py-24 items-center h-full">
+          <h1 className="uppercase text-6xl">Hårstugan i Nora</h1>
+        </div>
       </section>
       <section className=" bg-palette-dark relative">
         <div

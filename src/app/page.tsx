@@ -11,7 +11,7 @@ export default async function Home() {
   const ringSize = 280;
   return (
     <main>
-      <section className="w-full relative h-[70vh]">
+      <section className="w-full relative h-[580px]">
         <Image
           src={"https://source.unsplash.com/random/1920×1030/?fruit"}
           alt="fruit"
@@ -83,10 +83,10 @@ export default async function Home() {
         />
         <div>
           <h3 className="text-white text-center text-6xl">Priser</h3>
-          <p className="uppercase text-palette-light text-center">
+          <p className="uppercase text-palette-light text-center pt-4">
             TILLÄGG FÖR HÅR LÄNGRE ÄN AXLARNA 150
           </p>
-          <div className="space-y-6 mt-6">
+          <div className="space-y-6 pt-6">
             {prices.map((price: Price) => (
               <p className="uppercase text-white text-xl" key={price.title}>
                 {price.title}
@@ -95,6 +95,31 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      <section className="min-h-[30vh]  py-16">
+        <Constraints>
+          <div className="grid grid-cols-3 gap-4">
+            {[0, 1, 2, 3].map((index) => (
+              <div
+                className="bg-neutral-400 h-[360px] col-span-1 w-full"
+                key={index}
+              />
+            ))}
+            <div className="bg-neutral-400 h-[360px] col-span-2 w-full" />
+          </div>
+        </Constraints>
+      </section>
+      <footer className="bg-black">
+        <Constraints>
+          <div className="py-16 flex justify-between">
+            <div className="bg-neutral-400 h-[360px] col-span-2 w-[360px]" />
+            <div className="bg-neutral-400 h-[360px] col-span-2 w-[360px]" />
+          </div>
+        </Constraints>
+
+        <p className="text-center text-white uppercase p-4">
+          &copy; Hårstugan {`${new Date().getFullYear()}`}
+        </p>
+      </footer>
     </main>
   );
 }
@@ -110,6 +135,6 @@ export const getPrices = async () => {
 
   const response = await fetch(`${API_URL}/prices`);
   const prices = await response.json();
-  console.log(prices);
+
   return prices as Price[];
 };

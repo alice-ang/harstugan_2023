@@ -8,6 +8,7 @@ import Page from "./Page";
 import Grid from "./Grid";
 import { Feature } from "./Feature";
 import Teaser from "./Teaser";
+import Body from "./Body";
 import { Footer } from "./Footer";
 /** 3. Initialize it as usual */
 storyblokInit({
@@ -18,6 +19,7 @@ storyblokInit({
     page: Page,
     grid: Grid,
     feature: Feature,
+    body: Body,
     footer: Footer,
   },
   apiOptions: {

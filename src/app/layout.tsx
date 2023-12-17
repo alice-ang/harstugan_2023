@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StoryblokProvider from "@/components/StoryblokProvider";
+import StoryblokProvider from "@/components/blocks/StoryblokProvider";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 
 const inter = Inter({ subsets: ["latin"] });

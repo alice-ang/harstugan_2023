@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p,
+li,
+a {
+  font-family: var(--font-montserrat);
+  font-size: 1rem /* 14px */;
+  line-height: 2.1rem; /* 20px */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-cormorant);
+}

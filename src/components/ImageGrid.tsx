@@ -3,7 +3,7 @@ import { Constraints } from "./Constraints";
 
 export const ImageGrid = () => {
   return (
-    <section className="min-h-[30vh] py-16">
+    <section className="min-h-[30vh] py-16 px-4">
       <Constraints>
         <div className="grid grid-cols-3 gap-4">
           {[0, 1, 2, 3].map((index) => (

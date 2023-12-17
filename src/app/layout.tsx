@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cormorant } from "next/font/google";
 import "./globals.css";
 import StoryblokProvider from "@/components/blocks/StoryblokProvider";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import TanStackProvider from "../../providers/TanStackProvider";
+import { montserrat, cormorant, allura } from "@/lib/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,11 @@ export default function RootLayout({
     <StoryblokProvider>
       <TanStackProvider>
         <html lang="en">
-          <body className={inter.className}>{children}</body>
+          <body
+            className={`${cormorant.variable} ${allura.variable} ${montserrat.variable} font-sans`}
+          >
+            {children}
+          </body>
         </html>
       </TanStackProvider>
     </StoryblokProvider>

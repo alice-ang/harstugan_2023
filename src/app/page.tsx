@@ -1,32 +1,41 @@
-import { Constraints } from "@/components";
+import {
+  Constraints,
+  Footer,
+  H,
+  ImageGrid,
+  Navigation,
+  Prices,
+} from "@/components";
 import { getStoryblokApi } from "@storyblok/react";
 import StoryblokStory from "@storyblok/react/story";
 import Image from "next/image";
-import { Price } from "../../api/prices";
 
 export default async function Home() {
   // const { data } = await fetchData();
-  const prices = await getPrices();
 
   const ringSize = 280;
   return (
     <main>
-      <section className="w-full relative h-[70vh]">
+      <section className="w-full h-[640px] relative">
+        <Navigation />
         <Image
-          src={"https://source.unsplash.com/random/1920×1030/?fruit"}
+          src={"https://source.unsplash.com/random/1920×1030/?city,night,green"}
           alt="fruit"
           style={{ objectFit: "cover" }}
           fill
           className="w-full h-full top-0 left-0 object-cover"
         />
-        <div className="backdrop-blur-md bg-black/10 md:w-[40%]">
-          Gehlwendljwdnljwen
+        <div className="backdrop-blur-md bg-black/10 md:w-[40%] flex-col justify-center py-24 items-center h-full">
+          <h1 className="uppercase text-6xl">Hårstugan i Nora</h1>
         </div>
       </section>
       <section className=" bg-palette-dark relative">
+        <div
+          className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}
+        />
         <Constraints>
           <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 md:col-span-1 py-16">
+            <div className="col-span-2 md:col-span-1 py-16 relative">
               <p className="text-xl text-palette-gold pb-6">Om oss</p>
               <h3 className="text-5xl text-white">Hårstugan fyller x år</h3>
               <p className="text-white pt-4">
@@ -35,9 +44,6 @@ export default async function Home() {
                 från Frisörernas yrkesnämnd(FYN) samt tagit gesällen. Från 2021
                 är vi dessutom utbildade hårologer.
               </p>
-              <div
-                className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}
-              />
             </div>
 
             <div className="col-span-2 md:col-span-1 relative">
@@ -77,24 +83,9 @@ export default async function Home() {
           className={`rounded-full h-[280px] w-[280px] border-4 border-palette-gold absolute -bottom-[140px] -right-[140px]`}
         />
       </section>
-      <section className="bg-black flex justify-center items-center py-16 relative overflow-hidden">
-        <div
-          className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -top-[140px] -right-[140px] `}
-        />
-        <div>
-          <h3 className="text-white text-center text-6xl">Priser</h3>
-          <p className="uppercase text-palette-light text-center">
-            TILLÄGG FÖR HÅR LÄNGRE ÄN AXLARNA 150
-          </p>
-          <div className="space-y-6 mt-6">
-            {prices.map((price: Price) => (
-              <p className="uppercase text-white text-xl" key={price.title}>
-                {price.title}
-              </p>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Prices />
+      <ImageGrid />
+      <Footer />
     </main>
   );
 }
@@ -104,12 +95,3 @@ export default async function Home() {
 
 //   return storyblokApi.get(`cdn/stories/home`, { version: "draft" });
 // }
-
-export const getPrices = async () => {
-  const API_URL = process.env.API_URL;
-
-  const response = await fetch(`${API_URL}/prices`);
-  const prices = await response.json();
-  console.log(prices);
-  return prices as Price[];
-};

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-import StoryblokProvider from "@/components/StoryblokProvoder";
+import StoryblokProvider from "@/components/blocks/StoryblokProvider";
+import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+import TanStackProvider from "../../providers/TanStackProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +13,8 @@ export const metadata: Metadata = {
 };
 
 storyblokInit({
-  accessToken: process.env.storyblokApiToken,
+  accessToken: "koy8xqXqglTnVKt10C5lLwtt",
   use: [apiPlugin],
-  apiOptions: {
-    region: "eu",
-  },
 });
 
 export default function RootLayout({
@@ -26,9 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <StoryblokProvider>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
+      <TanStackProvider>
+        <html lang="en">
+          <body className={inter.className}>{children}</body>
+        </html>
+      </TanStackProvider>
     </StoryblokProvider>
   );
 }

@@ -32,8 +32,12 @@ pnpm run storybook
 
 ##### Run Storyblok CMS:
 
-The Storyblok port is set to [https://localhost:3010](https://localhost:3010).
-
 1. Make sure you have setup a HTTPS proxy [Windows](https://www.storyblok.com/faq/setup-dev-server-https-windows) / [Mac](https://www.storyblok.com/faq/setup-dev-server-https-proxy)
+
+```bash
+local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem
+```
+
+The Storyblok port is set to [https://localhost:3010](https://localhost:3010).
 
 ## Deploy on Vercel

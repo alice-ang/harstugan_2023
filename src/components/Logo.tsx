@@ -20,7 +20,7 @@ export const Logo = () => {
           src={"/harstugan_logo.png"}
           alt="fruit"
           style={{ objectFit: "cover" }}
-          width={80}
+          width={90}
           height={90}
         />
       </span>

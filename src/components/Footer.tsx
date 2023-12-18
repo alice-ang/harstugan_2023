@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className="bg-black">
       <Constraints>
         <div className="py-16 flex justify-between gap-4">
-          <div className="">
+          <div>
             <Logo />
             <p className="text-palette-light">Prästgatan 5B, 713 31 Nora</p>
             <p className="text-palette-light">Telnr: 0587 - 100 34</p>
@@ -29,7 +29,7 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="">
+          <div>
             <p className="uppercase text-xl text-palette-light pb-2">
               Öppettider
             </p>

@@ -28,9 +28,7 @@ export default async function Home() {
           <h1 className="uppercase text-6xl text-white">Hårstugan i Nora</h1>
         </div>
       </section>
-      <section className="py-12 bg-palette-cream">
-        <h2>Logo</h2>
-      </section>
+
       <section className=" bg-palette-dark relative">
         <div
           className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}

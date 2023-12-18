@@ -60,9 +60,9 @@ export default async function Home() {
           </div>
         </Constraints>
       </section>
-      <section className="bg-palette-cream flex justify-center py-16 relative overflow-hidden">
+      <section className="bg-palette-cream flex justify-center py-16 relative overflow-hidden ">
         <div className="grid grid-cols-2 gap-4 ">
-          <div className="col-span-2 md:col-span-1 space-y-4">
+          <div className="col-span-2 md:col-span-1 space-y-4 ">
             <p className="text-xl uppercase text-center font-semibold">
               Välkommen
             </p>

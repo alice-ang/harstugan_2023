@@ -13,12 +13,20 @@ export const Footer = () => {
             <p className="text-palette-light">Prästgatan 5B, 713 31 Nora</p>
             <p className="text-palette-light">Telnr: 0587 - 100 34</p>
             <div className="space-x-4 flex pt-12">
-              <div className="bg-white w-fit p-1 rounded-full">
+              <a
+                className="bg-white w-fit p-1 rounded-full"
+                href="https://www.facebook.com/profile.php?id=100040185922018"
+                target="_blank"
+              >
                 <FaFacebook size={16} />
-              </div>
-              <div className="bg-white w-fit p-1 rounded-full">
+              </a>
+              <a
+                className="bg-white w-fit p-1 rounded-full"
+                href="https://www.instagram.com/harstugan/"
+                target="_blank"
+              >
                 <FaInstagram size={16} />
-              </div>
+              </a>
             </div>
           </div>
           <div className="">

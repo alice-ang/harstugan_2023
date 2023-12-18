@@ -1,7 +1,6 @@
 import {
   Constraints,
   Footer,
-  H,
   ImageGrid,
   Navigation,
   Prices,

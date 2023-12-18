@@ -7,7 +7,8 @@ li,
 a {
   font-family: var(--font-montserrat);
   font-size: 1rem /* 14px */;
-  line-height: 2.1rem; /* 20px */
+  line-height: 2rem; /* 20px */
+  letter-spacing: 0.16rem;
 }
 
 h1,

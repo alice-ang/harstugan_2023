@@ -23,6 +23,7 @@ const config: Config = {
           gold: "#C19A5D",
           black: "#080D10",
           white: "#ffffff",
+          brown: "#A5836A",
         },
       },
     },

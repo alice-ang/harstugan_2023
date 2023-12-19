@@ -4,7 +4,9 @@ import {
   ImageGrid,
   Navigation,
   Prices,
+  Slider,
 } from "@/components";
+import { calculateYearsBetween, getCurrentYear } from "@/lib/functions";
 import { getStoryblokApi } from "@storyblok/react";
 import StoryblokStory from "@storyblok/react/story";
 import Image from "next/image";
@@ -12,32 +14,21 @@ import Image from "next/image";
 export default async function Home() {
   // const { data } = await fetchData();
 
-  const ringSize = 280;
   return (
     <main>
-      <section className="w-full h-[640px] relative">
-        <Navigation />
-        <Image
-          src={"https://source.unsplash.com/random/1920×1030/?hair,salon"}
-          alt="fruit"
-          style={{ objectFit: "cover" }}
-          fill
-          className="w-full h-full top-0 left-0 object-cover"
-        />
-        <div className="backdrop-blur-md bg-black/10 md:w-[40%] flex-col justify-center py-24 items-center h-full">
-          <h1 className="uppercase text-6xl text-white">Hårstugan i Nora</h1>
-        </div>
-      </section>
-
+      <Slider />
       <section className=" bg-palette-dark relative">
         <div
           className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}
         />
         <Constraints>
           <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 md:col-span-1 py-16 relative">
+            <div className="col-span-2 md:col-span-1 py-16 px-4 relative">
               <p className="text-xl text-palette-gold pb-6 uppercase">Om oss</p>
-              <h3 className="text-5xl text-white">Hårstugan fyller x år</h3>
+              <h3 className="text-5xl text-white">{`Hårstugan fyller ${calculateYearsBetween(
+                1995,
+                getCurrentYear()
+              )} år`}</h3>
               <p className="text-palette-light pt-4">
                 Hårstugan drivs av frisörmästare Jenny Carlsson. Här jobbar
                 också Caroline Olsson. Både Carro och Jenny har frisörlicens

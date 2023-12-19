@@ -26,7 +26,7 @@ export default function RootLayout({
       <TanStackProvider>
         <html lang="en">
           <body
-            className={`${cormorant.variable} ${allura.variable} ${montserrat.variable} font-sans`}
+            className={`${cormorant.variable} ${allura.variable} ${montserrat.variable} font-sans `}
           >
             {children}
           </body>

@@ -8,8 +8,8 @@ export const Footer = () => {
   return (
     <footer className="bg-black">
       <Constraints>
-        <div className="py-16 flex justify-between gap-4 px-4">
-          <div>
+        <div className="py-16 flex flex-wrap justify-center md:justify-between gap-8 px-4">
+          <div className="order-last md:order-first">
             <Logo />
             <p className="text-palette-light">Prästgatan 5B, 713 31 Nora</p>
             <p className="text-palette-light">Telnr: 0587 - 100 34</p>

@@ -7,13 +7,10 @@ import {
   Slider,
 } from "@/components";
 import { calculateYearsBetween, getCurrentYear } from "@/lib/functions";
-import { getStoryblokApi } from "@storyblok/react";
-import StoryblokStory from "@storyblok/react/story";
+
 import Image from "next/image";
 
 export default async function Home() {
-  // const { data } = await fetchData();
-
   return (
     <main>
       <Slider />

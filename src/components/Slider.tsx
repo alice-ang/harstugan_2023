@@ -18,7 +18,7 @@ export const Slider = () => {
         fill
         className="w-full h-full top-0 left-0 object-cover"
       />
-      <div className="backdrop-blur-sm bg-black/10 w-full md:w-[46%] flex-col justify-center py-24 px-4 items-center h-full">
+      <div className="backdrop-blur-sm bg-black/20 w-full flex-col justify-center py-24 px-4 items-center h-full">
         <Constraints>
           <div className="space-y-14">
             <div className="space-y-3">

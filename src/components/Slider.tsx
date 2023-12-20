@@ -10,7 +10,6 @@ export const Slider = () => {
 
   return (
     <section className="w-full h-[640px] relative">
-      <Navigation />
       <Image
         src={`https://source.unsplash.com/random/1920×1030/?hair,salon/${idx}`}
         alt="fruit"

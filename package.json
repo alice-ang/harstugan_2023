@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "json": "json-server --watch db.json  --port 3004",
-    "slicemachine": "start-slicemachine"
+    "slice": "start-slicemachine"
   },
   "dependencies": {
     "@prismicio/client": "^7.3.1",

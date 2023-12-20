@@ -19,7 +19,7 @@ export default async function Home() {
           className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}
         />
         <Constraints>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 items-center flex-col justify-center">
             <div className="col-span-2 md:col-span-1 py-16 px-4 relative">
               <p className="text-xl text-palette-gold pb-6 uppercase">Om oss</p>
               <h3 className="text-5xl text-white">{`Hårstugan fyller ${calculateYearsBetween(
@@ -79,7 +79,6 @@ export default async function Home() {
       </section>
       <Prices />
       <ImageGrid />
-      <Footer />
     </main>
   );
 }

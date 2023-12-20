@@ -5,5 +5,5 @@ type ConstraintsProps = {
 };
 
 export const Constraints: FC<ConstraintsProps> = ({ children }) => {
-  return <div className="max-w-7xl mx-auto h-full">{children}</div>;
+  return <div className="max-w-7xl mx-auto">{children}</div>;
 };

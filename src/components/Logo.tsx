@@ -13,7 +13,7 @@ export const Logo = async () => {
       <span className="hidden md:block">
         <Image
           src={settings.data.logo.url ?? "/harstugan_logo.png"}
-          alt="fruit"
+          alt="logo"
           style={{ objectFit: "cover" }}
           width={120}
           height={90}
@@ -22,7 +22,7 @@ export const Logo = async () => {
       <span className="block md:hidden">
         <Image
           src={settings.data.logo.url ?? "/harstugan_logo.png"}
-          alt="fruit"
+          alt="logo"
           style={{ objectFit: "cover" }}
           width={90}
           height={90}

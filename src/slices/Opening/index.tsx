@@ -32,17 +32,17 @@ const Opening = ({ slice }: OpeningProps): JSX.Element => {
         <div className="col-span-2 md:col-span-1 bg-red-500">
           {slice.items.map((hour) => (
             <p className="text-xl uppercase font-semibold" key={hour.days}>
-              {hour.days} / {hour.hours} lwjdqwijd
+              {hour.days} / {hour.hours}
             </p>
           ))}
         </div>
       </div>
-      <div
+      {/* <div
         className={`rounded-full h-[280px] w-[280px] border-4 border-palette-gold absolute -top-[140px] -left-[140px] `}
       />
       <div
         className={`rounded-full h-[280px] w-[280px] border-4 border-palette-gold absolute -bottom-[140px] -right-[140px]`}
-      />
+      /> */}
     </section>
   );
 };

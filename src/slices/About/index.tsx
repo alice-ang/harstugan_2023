@@ -18,9 +18,9 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div
+      {/* <div
         className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}
-      />
+      /> */}
       <Constraints>
         <div className="grid grid-cols-2 gap-4 ">
           <div className="col-span-2 md:col-span-1 py-16 px-4 relative">
@@ -37,6 +37,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
               alt={slice.primary.image.alt ?? "Hårstugan"}
               style={{ objectFit: "cover" }}
               fill
+              sizes="100vw"
               className="w-full h-full top-0 left-0 object-cover"
             />
           </div>

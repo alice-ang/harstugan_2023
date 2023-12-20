@@ -1,0 +1,48 @@
+{
+  "id": "opening",
+  "type": "SharedSlice",
+  "name": "Opening",
+  "description": "Opening",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "overline": {
+          "type": "Text",
+          "config": {
+            "label": "Overline",
+            "placeholder": ""
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "days": {
+          "type": "Text",
+          "config": {
+            "label": "Days",
+            "placeholder": ""
+          }
+        },
+        "hours": {
+          "type": "Text",
+          "config": {
+            "label": "Hours",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

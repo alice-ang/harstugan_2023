@@ -142,7 +142,7 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+type HomepageDocumentDataSlicesSlice = AboutSlice | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -314,6 +314,78 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *About → Primary*
+ */
+export interface AboutSliceDefaultPrimary {
+  /**
+   * Heading field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Image field in *About → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Overline field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.overline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overline: prismic.KeyTextField;
+
+  /**
+   * Text field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for About Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *About*
+ */
+type AboutSliceVariation = AboutSliceDefault;
+
+/**
+ * About Shared Slice
+ *
+ * - **API ID**: `about`
+ * - **Description**: About
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
+
+/**
  * Primary content in *Hero → Items*
  */
 export interface HeroSliceDefaultItem {
@@ -375,6 +447,228 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *Opening → Primary*
+ */
+export interface OpeningSliceDefaultPrimary {
+  /**
+   * Overline field in *Opening → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: opening.primary.overline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overline: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Opening → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: opening.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Opening → Items*
+ */
+export interface OpeningSliceDefaultItem {
+  /**
+   * Days field in *Opening → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: opening.items[].days
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  days: prismic.KeyTextField;
+
+  /**
+   * Hours field in *Opening → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: opening.items[].hours
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hours: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Opening Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OpeningSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<OpeningSliceDefaultPrimary>,
+  Simplify<OpeningSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Opening*
+ */
+type OpeningSliceVariation = OpeningSliceDefault;
+
+/**
+ * Opening Shared Slice
+ *
+ * - **API ID**: `opening`
+ * - **Description**: Opening
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OpeningSlice = prismic.SharedSlice<
+  "opening",
+  OpeningSliceVariation
+>;
+
+/**
+ * Primary content in *Prices → Primary*
+ */
+export interface PricesSliceDefaultPrimary {
+  /**
+   * Heading field in *Prices → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prices.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *Prices → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prices.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Extra field in *Prices → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prices.primary.extra
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  extra: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Prices → Items*
+ */
+export interface PricesSliceDefaultItem {
+  /**
+   * Product field in *Prices → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prices.items[].product
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  product: prismic.KeyTextField;
+
+  /**
+   * Price field in *Prices → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prices.items[].price
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  price: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Prices Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PricesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PricesSliceDefaultPrimary>,
+  Simplify<PricesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Prices*
+ */
+type PricesSliceVariation = PricesSliceDefault;
+
+/**
+ * Prices Shared Slice
+ *
+ * - **API ID**: `prices`
+ * - **Description**: Prices
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PricesSlice = prismic.SharedSlice<"prices", PricesSliceVariation>;
+
+/**
+ * Primary content in *Services → Items*
+ */
+export interface ServicesSliceDefaultItem {
+  /**
+   * Heading field in *Services → Items*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Service name
+   * - **API ID Path**: services.items[].heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+
+  /**
+   * Body field in *Services → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Lorem ipsum dolor sit amet
+   * - **API ID Path**: services.items[].body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Services Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<ServicesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Services*
+ */
+type ServicesSliceVariation = ServicesSliceDefault;
+
+/**
+ * Services Shared Slice
+ *
+ * - **API ID**: `services`
+ * - **Description**: Services
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesSlice = prismic.SharedSlice<
+  "services",
+  ServicesSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -396,10 +690,28 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
+      AboutSlice,
+      AboutSliceDefaultPrimary,
+      AboutSliceVariation,
+      AboutSliceDefault,
       HeroSlice,
       HeroSliceDefaultItem,
       HeroSliceVariation,
       HeroSliceDefault,
+      OpeningSlice,
+      OpeningSliceDefaultPrimary,
+      OpeningSliceDefaultItem,
+      OpeningSliceVariation,
+      OpeningSliceDefault,
+      PricesSlice,
+      PricesSliceDefaultPrimary,
+      PricesSliceDefaultItem,
+      PricesSliceVariation,
+      PricesSliceDefault,
+      ServicesSlice,
+      ServicesSliceDefaultItem,
+      ServicesSliceVariation,
+      ServicesSliceDefault,
     };
   }
 }

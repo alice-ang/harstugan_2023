@@ -11,6 +11,11 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "source.unsplash.com",
+        port: "9999",
+      },
+      {
+        protocol: "https",
         hostname: "images.prismic.io",
       },
     ],

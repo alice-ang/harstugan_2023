@@ -142,7 +142,7 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = AboutSlice | HeroSlice;
+type HomepageDocumentDataSlicesSlice = OpeningSlice | AboutSlice | HeroSlice;
 
 /**
  * Content for Homepage documents

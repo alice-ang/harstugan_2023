@@ -32,9 +32,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         className="w-full h-full top-0 left-0 object-cover"
       />
 
-      <div className="backdrop-blur-sm bg-black/20 w-full py-24 px-4 h-full ">
+      <div className="backdrop-blur-sm bg-black/30 w-full py-24 px-4 h-full">
         <Constraints>
-          <div className="space-y-14 w-full md:w-1/2">
+          <div className="space-y-14 w-full md:w-1/2 ">
             <div className="space-y-3">
               <h1 className="uppercase text-6xl text-white">
                 {slice.items[idx].title}
@@ -49,7 +49,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             </p>
           </div>
 
-          <div className="space-x-4">
+          <div className="space-x-4 pt-4">
             <button
               className="bg-palette-brown p-4 border border-palette-gold"
               onClick={() => (idx == 0 ? setIdx(0) : setIdx(idx - 1))}

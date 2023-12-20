@@ -51,7 +51,7 @@ export const Footer = async () => {
       </Constraints>
 
       <p className="text-center text-white uppercase p-4 text-sm">
-        &copy; {footer.data.copyright} {`${getCurrentYear()}`}
+        &copy; {`${getCurrentYear()}`} {footer.data.copyright}
       </p>
     </footer>
   );

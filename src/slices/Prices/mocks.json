@@ -1,0 +1,46 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "period",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "figure",
+				"type": "Text"
+			},
+			"extra": {
+				"__TYPE__": "FieldContent",
+				"value": "hundred",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"product",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "unit",
+							"type": "Text"
+						}
+					],
+					[
+						"price",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "engine",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,3 +1,6 @@
+import type { IconType } from "react-icons";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+
 export const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(" ");
 };
@@ -25,4 +28,21 @@ export const calculateYearsBetween = (
 
 export const getCurrentYear = (): number => {
   return new Date().getFullYear();
+};
+
+export const renderIcon = ({
+  type,
+  size = 16,
+}: {
+  type: string;
+  size: number;
+}) => {
+  switch (type.toLowerCase()) {
+    case "instagram":
+      break;
+    case "facebook":
+      break;
+    default:
+      break;
+  }
 };

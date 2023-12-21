@@ -1,0 +1,41 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"overline": {
+				"__TYPE__": "FieldContent",
+				"value": "last",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "reach",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"days",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "yellow",
+							"type": "Text"
+						}
+					],
+					[
+						"hours",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "decide",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

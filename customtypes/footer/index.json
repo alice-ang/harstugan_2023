@@ -1,0 +1,71 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "socials": {
+        "type": "Group",
+        "config": {
+          "label": "socials",
+          "fields": {
+            "url": {
+              "type": "Link",
+              "config": {
+                "label": "url",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "copyright": {
+        "type": "Text",
+        "config": {
+          "label": "Copyright",
+          "placeholder": ""
+        }
+      },
+      "opening_hours": {
+        "type": "Group",
+        "config": {
+          "label": "Opening Hours",
+          "fields": {
+            "days": {
+              "type": "Text",
+              "config": {
+                "label": "Days",
+                "placeholder": ""
+              }
+            },
+            "hours": {
+              "type": "Text",
+              "config": {
+                "label": "hours",
+                "placeholder": ""
+              }
+            },
+            "icons": {
+              "type": "Select",
+              "config": {
+                "label": "Icons",
+                "placeholder": "",
+                "options": ["Instagram", "Facebook"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ export const Navigation = async () => {
               </Link>
             ))}
           </ul>
-          <button className="block md:hidden p-2 rounded bg-palette-dark border border-palette-white">
+          <button className="block md:hidden p-2 rounded bg-palette-dark border border-palette-white ">
             <GiHamburgerMenu size={24} color="white" />
           </button>
         </div>

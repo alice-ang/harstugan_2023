@@ -52,13 +52,13 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               {slice.items.length > 1 && (
                 <div className="space-x-4">
                   <button
-                    className="bg-palette-brown p-4 border border-palette-gold"
+                    className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
                     onClick={() => (idx == 0 ? setIdx(0) : setIdx(idx - 1))}
                   >
                     <FaChevronLeft size={16} color="white" />
                   </button>
                   <button
-                    className="bg-palette-brown p-4 border border-palette-gold"
+                    className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
                     onClick={() =>
                       idx === slice.items.length - 1 ? null : setIdx(idx + 1)
                     }

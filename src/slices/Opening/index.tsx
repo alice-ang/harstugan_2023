@@ -40,10 +40,10 @@ const Opening = ({ slice }: OpeningProps): JSX.Element => {
       </div>
 
       <div
-        className={`rounded-full h-[140px] w-[140px] xl:h-[280px] xl:w-[280px] border-4 border-palette-gold absolute xl:-top-[140px] xl:-left-[140px] -top-[70px] -left-[70px]`}
+        className={`rounded-full h-[140px] w-[140px] 2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-gold absolute 2xl:-top-[140px] 2xl:-left-[140px] -top-[70px] -left-[70px]`}
       />
       <div
-        className={`rounded-full h-[140px] w-[140px]  xl:h-[280px] xl:w-[280px] border-4 border-palette-gold absolute xl:-bottom-[140px] xl:-right-[140px] -bottom-[70px] -right-[70px]`}
+        className={`rounded-full h-[140px] w-[140px]  2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-gold absolute 2xl:-bottom-[140px] 2xl:-right-[140px] -bottom-[70px] -right-[70px]`}
       />
     </section>
   );

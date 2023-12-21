@@ -6,20 +6,6 @@
   "status": true,
   "json": {
     "Main": {
-      "adress": {
-        "type": "Text",
-        "config": {
-          "label": "Adress",
-          "placeholder": ""
-        }
-      },
-      "phone": {
-        "type": "Text",
-        "config": {
-          "label": "phone",
-          "placeholder": ""
-        }
-      },
       "socials": {
         "type": "Group",
         "config": {

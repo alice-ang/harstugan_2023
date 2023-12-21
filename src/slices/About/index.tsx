@@ -2,6 +2,8 @@ import { Constraints } from "@/components";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
+import { createClient } from "@/prismicio";
+import { ring, ringSmall } from "@/lib/variables";
 
 /**
  * Props for `About`.
@@ -18,9 +20,9 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {/* <div
-        className={`rounded-full h-[280px] w-[280px] border-4 border-palette-white absolute -bottom-[140px] -left-[140px] `}
-      /> */}
+      <div
+        className={`rounded-full h-[140px] w-[140px] 2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-white absolute 2xl:-bottom-[140px] 2xl:-left-[140px] -bottom-[70px] -left-[70px]`}
+      />
       <Constraints>
         <div className="grid grid-cols-2 gap-4 ">
           <div className="col-span-2 md:col-span-1 py-16 px-4 relative">

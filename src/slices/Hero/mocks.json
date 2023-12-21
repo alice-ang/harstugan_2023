@@ -2,7 +2,13 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "planning",
+				"type": "Text"
+			}
+		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
@@ -26,7 +32,6 @@
 					[
 						"image",
 						{
-							"__TYPE__": "ImageContent",
 							"url": "https://images.unsplash.com/photo-1696446970341-1c02cdb110d8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MXwxfHNlYXJjaHwxNXx8ZnJ1aXR8ZW58MHx8fHwxNzAzMDgzNjI3fDA&ixlib=rb-4.0.3&q=85",
 							"alt": "a woman reading a book next to a pool",
 							"origin": {
@@ -45,6 +50,8 @@
 									"y": 0
 								}
 							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					]
@@ -56,7 +63,6 @@
 					[
 						"image",
 						{
-							"__TYPE__": "ImageContent",
 							"url": "https://images.unsplash.com/photo-1696446700665-1e26fcca574f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MXwxfHNlYXJjaHwxfHxmcnVpdHxlbnwwfHx8fDE3MDMwODM2Mjd8MA&ixlib=rb-4.0.3&q=85",
 							"alt": "a man and a woman laying on a blanket with fruit",
 							"origin": {
@@ -75,6 +81,8 @@
 									"y": 0
 								}
 							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					],

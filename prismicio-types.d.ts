@@ -69,28 +69,6 @@ export interface FooterDocumentDataOpeningHoursItem {
  */
 interface FooterDocumentData {
   /**
-   * Adress field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.adress
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  adress: prismic.KeyTextField;
-
-  /**
-   * phone field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.phone
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  phone: prismic.KeyTextField;
-
-  /**
    * socials field in *Footer*
    *
    * - **Field Type**: Group
@@ -294,6 +272,39 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   logo: prismic.ImageField<never>;
+
+  /**
+   * Founded Date field in *Settings*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.founded_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  founded_date: prismic.NumberField;
+
+  /**
+   * Adress field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.adress
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  adress: prismic.KeyTextField;
+
+  /**
+   * Phone field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.phone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
 }
 
 /**
@@ -390,6 +401,21 @@ type AboutSliceVariation = AboutSliceDefault;
 export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * subtitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *Hero → Items*
  */
 export interface HeroSliceDefaultItem {
@@ -433,7 +459,7 @@ export interface HeroSliceDefaultItem {
  */
 export type HeroSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<HeroSliceDefaultPrimary>,
   Simplify<HeroSliceDefaultItem>
 >;
 
@@ -699,6 +725,7 @@ declare module "@prismicio/client" {
       AboutSliceVariation,
       AboutSliceDefault,
       HeroSlice,
+      HeroSliceDefaultPrimary,
       HeroSliceDefaultItem,
       HeroSliceVariation,
       HeroSliceDefault,

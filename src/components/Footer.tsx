@@ -9,7 +9,7 @@ export const Footer = async () => {
   const client = createClient();
 
   const footer = await client.getSingle("footer");
-
+  const settings = await client.getSingle("settings");
   return (
     <footer className="bg-black">
       <Constraints>
@@ -17,8 +17,8 @@ export const Footer = async () => {
           <div className="order-last md:order-first">
             <Logo />
 
-            <p className="text-palette-light"> {footer.data.adress}</p>
-            <p className="text-palette-light"> {footer.data.phone}</p>
+            <p className="text-palette-light"> {settings.data.adress}</p>
+            <p className="text-palette-light">Telnr: {settings.data.phone}</p>
             <div className="space-x-4 flex pt-12">
               <a
                 className="bg-white w-fit p-1 rounded-full"

@@ -58,6 +58,27 @@
           "constraint": {},
           "thumbnails": []
         }
+      },
+      "founded_date": {
+        "type": "Number",
+        "config": {
+          "label": "Founded Date",
+          "placeholder": ""
+        }
+      },
+      "adress": {
+        "type": "Text",
+        "config": {
+          "label": "Adress",
+          "placeholder": ""
+        }
+      },
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Phone",
+          "placeholder": ""
+        }
       }
     }
   }

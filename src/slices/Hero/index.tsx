@@ -19,7 +19,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
   return (
     <section
-      className="w-full h-[640px] relative"
+      className="w-full h-[640px] relative bg-palette-dark"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >

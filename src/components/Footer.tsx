@@ -49,13 +49,17 @@ export const Footer = async () => {
           </div>
         </div>
       </Constraints>
-      <div className="flex flex-row justify-center md:justify-between items-center flex-wrap p-4 space-y-2">
+      <div className="flex flex-row justify-center md:justify-between items-center flex-wrap p-6 space-x-4">
         <p className="text-center text-palette-light uppercase text-xs">
           &copy; {`${getCurrentYear()}`} {footer.data.copyright}
         </p>
-        <p className="text-center text-palette-light uppercase text-xs">
+        <a
+          className="text-center text-palette-light uppercase text-xs"
+          href="https://www.linkedin.com/in/alice-anglesj%C3%B6-9503121a7/"
+          target="_blank"
+        >
           Utvecklad med ♥️ av Alice A
-        </p>
+        </a>
       </div>
     </footer>
   );

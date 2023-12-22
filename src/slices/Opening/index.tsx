@@ -15,7 +15,8 @@ const Opening = ({ slice }: OpeningProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-palette-cream flex justify-center py-16 relative overflow-hidden "
+      className="bg-palette-cream flex justify-center py-16 relative overflow-hidden"
+      id="contact"
     >
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 md:col-span-1 space-y-4 p-4 ">

@@ -32,6 +32,16 @@
             "label": "Extra",
             "placeholder": ""
           }
+        },
+        "section_id": {
+          "type": "Link",
+          "config": {
+            "label": "Section id",
+            "select": "document",
+            "customtypes": [
+              "section_id"
+            ]
+          }
         }
       },
       "items": {

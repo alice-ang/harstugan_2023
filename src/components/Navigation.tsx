@@ -15,9 +15,9 @@ export const Navigation = async () => {
         <div className="flex justify-between items-center">
           <Logo />
           <ul className="space-x-8 text-white hidden md:block">
-            {settings.data.navigation.map((nav) => (
-              <Link //TODO: Prismicnextlink
-                href={"/"}
+            {settings.data.navigation.map((nav, index) => (
+              <Link
+                href={`#${settings.data.sections[index].section_id}`}
                 passHref
                 className="uppercase font-semibold"
                 key={nav.label}
@@ -27,8 +27,9 @@ export const Navigation = async () => {
             ))}
           </ul>
           <MobileNav
-            links={settings.data.navigation.map((nav) => ({
+            links={settings.data.navigation.map((nav, index) => ({
               label: nav.label,
+              href: settings.data.sections[index].section_id,
             }))}
           />
         </div>

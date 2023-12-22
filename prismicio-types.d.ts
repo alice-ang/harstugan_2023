@@ -216,6 +216,21 @@ export interface SettingsDocumentDataNavigationItem {
 }
 
 /**
+ * Item in *Settings → Sections*
+ */
+export interface SettingsDocumentDataSectionsItem {
+  /**
+   * Section id field in *Settings → Sections*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.sections[].section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
+}
+
+/**
  * Content for Settings documents
  */
 interface SettingsDocumentData {
@@ -306,6 +321,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   phone: prismic.KeyTextField;
+
+  /**
+   * Sections field in *Settings*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.sections[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  sections: prismic.GroupField<Simplify<SettingsDocumentDataSectionsItem>>;
 }
 
 /**
@@ -372,6 +398,16 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   text: prismic.KeyTextField;
+
+  /**
+   * Section id field in *About → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  section_id: prismic.ContentRelationshipField<"section_id">;
 }
 
 /**
@@ -648,6 +684,16 @@ export interface OpeningSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
+
+  /**
+   * Section id field in *Opening → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: opening.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  section_id: prismic.ContentRelationshipField<"section_id">;
 }
 
 /**
@@ -738,6 +784,16 @@ export interface PricesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   extra: prismic.KeyTextField;
+
+  /**
+   * Section id field in *Prices → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prices.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  section_id: prismic.ContentRelationshipField<"section_id">;
 }
 
 /**
@@ -867,6 +923,7 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
+      SettingsDocumentDataSectionsItem,
       AllDocumentTypes,
       AboutSlice,
       AboutSliceDefaultPrimary,

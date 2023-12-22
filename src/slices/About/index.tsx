@@ -19,6 +19,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       className=" bg-palette-dark relative overflow-hidden"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      id="about"
     >
       <div
         className={`rounded-full h-[140px] w-[140px] 2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-white absolute 2xl:-bottom-[140px] 2xl:-left-[140px] -bottom-[70px] -left-[70px]`}

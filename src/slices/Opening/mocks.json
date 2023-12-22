@@ -12,6 +12,13 @@
 				"__TYPE__": "FieldContent",
 				"value": "reach",
 				"type": "Text"
+			},
+			"section_id": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": [

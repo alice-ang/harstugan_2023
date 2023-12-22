@@ -40,6 +40,13 @@
 				"__TYPE__": "FieldContent",
 				"type": "Text",
 				"value": "Lorem upsum"
+			},
+			"section_id": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": []

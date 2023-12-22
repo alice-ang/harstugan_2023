@@ -4,12 +4,11 @@ import TanStackProvider from "../../providers/TanStackProvider";
 import { montserrat, cormorant, allura } from "@/lib/fonts";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
-import { Footer, Navigation } from "@/components";
+import { BackToTop, Footer, Navigation } from "@/components";
 import { createClient } from "@/prismicio";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
-
   const settings = await client.getSingle("settings");
 
   return {
@@ -33,6 +32,7 @@ export default function RootLayout({
         >
           <Navigation />
           {children}
+          <BackToTop />
           <PrismicPreview repositoryName={repositoryName} />
           <Footer />
         </body>

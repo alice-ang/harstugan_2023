@@ -14,7 +14,7 @@ export const Logo = async () => {
         <Image
           src={settings.data.logo.url ?? "/harstugan_logo.png"}
           alt="logo"
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", height: "100%" }}
           width={120}
           height={90}
         />
@@ -23,7 +23,7 @@ export const Logo = async () => {
         <Image
           src={settings.data.logo.url ?? "/harstugan_logo.png"}
           alt="logo"
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", height: "100%" }}
           width={90}
           height={90}
         />

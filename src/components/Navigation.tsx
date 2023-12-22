@@ -2,12 +2,11 @@ import React from "react";
 import { Constraints } from "./Constraints";
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { createClient } from "@/prismicio";
+import { MobileNav } from "./MobileNav";
 
 export const Navigation = async () => {
   const client = createClient();
-
   const settings = await client.getSingle("settings");
 
   return (
@@ -27,9 +26,11 @@ export const Navigation = async () => {
               </Link>
             ))}
           </ul>
-          <button className="block md:hidden p-2 rounded bg-palette-dark border border-palette-white ">
-            <GiHamburgerMenu size={24} color="white" />
-          </button>
+          <MobileNav
+            links={settings.data.navigation.map((nav) => ({
+              label: nav.label,
+            }))}
+          />
         </div>
       </Constraints>
     </nav>

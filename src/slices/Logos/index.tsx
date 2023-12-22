@@ -20,8 +20,8 @@ const Logos = ({ slice }: LogosProps): JSX.Element => {
       <p className="uppercase text-palette-dark pb-8 text-center font-semibold text-sm">
         {slice.primary.title}
       </p>
-      <div className="relative flex overflow-x-scroll">
-        <div className="flex space-x-8">
+      <div className="relative flex overflow-x-scroll justify-center">
+        <div className="flex  space-x-8">
           {slice.items.map((item, index) => (
             <Image
               src={item.logo.url ?? ""}

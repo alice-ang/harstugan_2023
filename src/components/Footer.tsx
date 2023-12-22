@@ -25,19 +25,19 @@ export const Footer = async () => {
                 href="https://www.facebook.com/profile.php?id=100040185922018"
                 target="_blank"
               >
-                <FaFacebook size={16} />
+                <FaFacebook size={18} />
               </a>
               <a
                 className="bg-white w-fit p-1 rounded-full"
                 href="https://www.instagram.com/harstugan/"
                 target="_blank"
               >
-                <FaInstagram size={16} />
+                <FaInstagram size={18} />
               </a>
             </div>
           </div>
           <div>
-            <p className="uppercase text-xl text-palette-light pb-2">
+            <p className="uppercase text-xl text-palette-light pb-2 ">
               Öppettider
             </p>
 
@@ -49,10 +49,14 @@ export const Footer = async () => {
           </div>
         </div>
       </Constraints>
-
-      <p className="text-center text-white uppercase p-4 text-sm">
-        &copy; {`${getCurrentYear()}`} {footer.data.copyright}
-      </p>
+      <div className="flex flex-row justify-center md:justify-between items-center flex-wrap p-4 space-y-2">
+        <p className="text-center text-palette-light uppercase text-xs">
+          &copy; {`${getCurrentYear()}`} {footer.data.copyright}
+        </p>
+        <p className="text-center text-palette-light uppercase text-xs">
+          Utvecklad med ♥️ av Alice A
+        </p>
+      </div>
     </footer>
   );
 };

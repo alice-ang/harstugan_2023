@@ -1,5 +1,4 @@
 import { H } from "@/components";
-import { ring } from "@/lib/variables";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 

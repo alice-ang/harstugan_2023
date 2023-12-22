@@ -8,6 +8,7 @@ import { MdClose } from "react-icons/md";
 type MobileNavProps = {
   links: {
     label: KeyTextField;
+    href: KeyTextField;
   }[];
 };
 export const MobileNav: FC<MobileNavProps> = ({ links }) => {
@@ -37,14 +38,15 @@ export const MobileNav: FC<MobileNavProps> = ({ links }) => {
         <ul className="flex flex-col justify-center items-center h-full space-y-8 z-100">
           {links.map((link, index) => (
             <li key={index}>
-              <p
+              <a
                 className="text-xl text-palette-gold pb-6 uppercase"
                 onClick={() => {
                   setIsOpen(!isOpen);
                 }}
+                href={`#${link.href}`}
               >
                 {link.label}
-              </p>
+              </a>
             </li>
           ))}
         </ul>

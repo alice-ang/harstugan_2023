@@ -16,7 +16,7 @@ export const Navigation = async () => {
           <Logo />
           <ul className="space-x-8 text-white hidden md:block">
             {settings.data.navigation.map((nav, index) => (
-              <Link //TODO: Prismicnextlink
+              <Link
                 href={`#${settings.data.sections[index].section_id}`}
                 passHref
                 className="uppercase font-semibold"
@@ -27,8 +27,9 @@ export const Navigation = async () => {
             ))}
           </ul>
           <MobileNav
-            links={settings.data.navigation.map((nav) => ({
+            links={settings.data.navigation.map((nav, index) => ({
               label: nav.label,
+              href: settings.data.sections[index].section_id,
             }))}
           />
         </div>

@@ -15,9 +15,9 @@ export const Navigation = async () => {
         <div className="flex justify-between items-center">
           <Logo />
           <ul className="space-x-8 text-white hidden md:block">
-            {settings.data.navigation.map((nav) => (
+            {settings.data.navigation.map((nav, index) => (
               <Link //TODO: Prismicnextlink
-                href={"/"}
+                href={`#${settings.data.sections[index].section_id}`}
                 passHref
                 className="uppercase font-semibold"
                 key={nav.label}

@@ -79,6 +79,21 @@
           "label": "Phone",
           "placeholder": ""
         }
+      },
+      "sections": {
+        "type": "Group",
+        "config": {
+          "label": "Sections",
+          "fields": {
+            "section_id": {
+              "type": "Text",
+              "config": {
+                "label": "Section id",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }

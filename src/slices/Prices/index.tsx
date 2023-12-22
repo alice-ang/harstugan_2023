@@ -16,6 +16,7 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="bg-black flex justify-center items-center py-16 relative overflow-hidden px-4"
+      id="prices"
     >
       <H />
 

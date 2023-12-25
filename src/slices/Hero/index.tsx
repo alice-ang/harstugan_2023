@@ -34,7 +34,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
       <div className="backdrop-blur-md bg-black/40 py-24 px-6 h-full flex flex-col justify-center">
         <Constraints>
-          <div className="grid grid-cols-2 pt-8">
+          <div className="grid grid-cols-2 md:pt-8">
             <div className="col-span-1" />
             <div className="space-y-8 w-full col-span-2 md:col-span-1">
               <div className="space-y-3">
@@ -53,14 +53,20 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                 <div className="space-x-4">
                   <button
                     className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
-                    onClick={() => (idx == 0 ? setIdx(0) : setIdx(idx - 1))}
+                    onClick={() =>
+                      idx == 0
+                        ? setIdx(slice.items.length - 1)
+                        : setIdx(idx - 1)
+                    }
                   >
                     <FaChevronLeft size={16} color="white" />
                   </button>
                   <button
                     className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
                     onClick={() =>
-                      idx === slice.items.length - 1 ? null : setIdx(idx + 1)
+                      idx === slice.items.length - 1
+                        ? setIdx(0)
+                        : setIdx(idx + 1)
                     }
                   >
                     <FaChevronRight size={16} color="white" />

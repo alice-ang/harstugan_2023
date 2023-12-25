@@ -1,25 +1,28 @@
+"use client";
 import React from "react";
 import { Constraints } from "./Constraints";
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { createClient } from "@/prismicio";
 import { MobileNav } from "./MobileNav";
+import { SettingsDocument } from "../../prismicio-types";
+import { classNames } from "@/lib/functions";
 
-export const Navigation = async () => {
-  const client = createClient();
-  const settings = await client.getSingle("settings");
-
+export const Navigation = ({
+  settings,
+}: {
+  settings: SettingsDocument<string>;
+}) => {
   return (
-    <nav className="p-4 absolute z-10 w-full">
+    <nav className={classNames("p-4 md:fixed sticky top-0 z-10 w-full")}>
       <Constraints>
         <div className="flex justify-between items-center">
           <Logo />
-          <ul className="space-x-8 text-white hidden md:block">
+          <ul className="space-x-12 text-white hidden md:block ">
             {settings.data.navigation.map((nav, index) => (
               <Link
                 href={`#${settings.data.sections[index].section_id}`}
                 passHref
-                className="uppercase font-semibold"
+                className="uppercase font-semibold hover:text-palette-gold"
                 key={nav.label}
               >
                 {nav.label}
@@ -37,3 +40,10 @@ export const Navigation = async () => {
     </nav>
   );
 };
+
+// async function getSettings() {
+//   const client = createClient();
+//   const settings = await client.getSingle("settings");
+
+//   return settings;
+// }

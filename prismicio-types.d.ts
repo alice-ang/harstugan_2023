@@ -65,6 +65,21 @@ export interface FooterDocumentDataOpeningHoursItem {
 }
 
 /**
+ * Item in *Footer → logos*
+ */
+export interface FooterDocumentDataLogosItem {
+  /**
+   * logo field in *Footer → logos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logos[].logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+}
+
+/**
  * Content for Footer documents
  */
 interface FooterDocumentData {
@@ -102,6 +117,17 @@ interface FooterDocumentData {
   opening_hours: prismic.GroupField<
     Simplify<FooterDocumentDataOpeningHoursItem>
   >;
+
+  /**
+   * logos field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logos[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  logos: prismic.GroupField<Simplify<FooterDocumentDataLogosItem>>;
 }
 
 /**
@@ -917,6 +943,7 @@ declare module "@prismicio/client" {
       FooterDocumentData,
       FooterDocumentDataSocialsItem,
       FooterDocumentDataOpeningHoursItem,
+      FooterDocumentDataLogosItem,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,

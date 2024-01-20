@@ -25,7 +25,7 @@ export const getImages = async (): Promise<InstagramImage[]> => {
     (image: InstagramImage) => image.media_type === "IMAGE"
   );
   console.log(images);
-  return images.slice(0, 6);
+  return images.slice(0, 5);
 };
 
 export const ImageGrid = () => {
@@ -56,7 +56,7 @@ export const ImageGrid = () => {
                   />
                 </a>
               ))
-            : [0, 1, 2, 3, 4, 5].map((index) => (
+            : [0, 1, 2, 3, 4].map((index) => (
                 <div
                   key={index}
                   className=" p-4 h-full w-full bg-gray-200 aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 "
@@ -66,6 +66,22 @@ export const ImageGrid = () => {
                   </div>
                 </div>
               ))}
+          <a
+            href="https://www.instagram.com/harstugan/"
+            target="_blank"
+            className=" p-4 h-full w-full bg-palette-dark aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 "
+          >
+            <div className="flex justify-center items-center h-full w-full uppercase">
+              <div className="space-y-4 flex flex-col items-center justify-center">
+                <h3 className="text-white text-center text-6xl font-semibold">
+                  Följ oss
+                </h3>
+                <div className="bg-white h-10 w-10 p-1 rounded-full flex justify-center items-center">
+                  <FaInstagram size={22} />
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </Constraints>
     </section>

@@ -4,17 +4,19 @@ import { Logo } from "./Logo";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { getCurrentYear } from "@/lib/functions";
 import { createClient } from "@/prismicio";
+import Image from "next/image";
 
 export const Footer = async () => {
   const client = createClient();
 
   const footer = await client.getSingle("footer");
   const settings = await client.getSingle("settings");
+  console.log(footer.data.logos);
   return (
     <footer className="bg-black">
       <Constraints>
-        <div className="py-16 flex flex-wrap justify-center md:justify-between gap-8 px-4">
-          <div className="order-last md:order-first">
+        <div className="py-16 grid grid-cols-3">
+          <div className="order-2 my-8 md:m-0 md:order-1 col-span-3 md:col-span-1 ">
             <Logo />
 
             <p className="text-palette-light"> {settings.data.adress}</p>
@@ -36,7 +38,7 @@ export const Footer = async () => {
               </a>
             </div>
           </div>
-          <div>
+          <div className="order-1 md:order-2 col-span-3 md:col-span-1 ">
             <p className="uppercase text-xl text-palette-light pb-2 ">
               Öppettider
             </p>
@@ -45,6 +47,19 @@ export const Footer = async () => {
               <p className="text-white" key={item.days}>
                 {item.days} / {item.hours}
               </p>
+            ))}
+          </div>
+          <div className="order-3 flex flex-col space-y-4  col-span-3 md:col-span-1 ">
+            {footer.data.logos.map((image, index) => (
+              <div key={index} className="">
+                <Image
+                  src={image.logo.url!}
+                  style={{ objectFit: "cover", height: "100%" }}
+                  width={index == 0 ? 80 : 120}
+                  height={90}
+                  alt="footer logo"
+                />
+              </div>
             ))}
           </div>
         </div>

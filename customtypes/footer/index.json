@@ -65,6 +65,22 @@
             }
           }
         }
+      },
+      "logos": {
+        "type": "Group",
+        "config": {
+          "label": "logos",
+          "fields": {
+            "logo": {
+              "type": "Image",
+              "config": {
+                "label": "logo",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
       }
     }
   }

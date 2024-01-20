@@ -33,7 +33,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         className="w-full h-full top-0 left-0 object-cover"
       />
 
-      <div className="backdrop-blur-md bg-black/40 py-24 px-6 h-full flex flex-col justify-center">
+      <div className="backdrop-blur-sm bg-black/40 py-24 px-6 h-full flex flex-col justify-center">
         <Constraints>
           <div className="grid grid-cols-2 md:pt-8">
             <div className="col-span-1" />

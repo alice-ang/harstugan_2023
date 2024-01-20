@@ -16,7 +16,7 @@ export const ImageGrid = () => {
   });
 
   return (
-    <section className="py-16 p-4">
+    <section className="md:py-16 p-4">
       <Constraints>
         <div className="grid grid-cols-1 gap-2 md:grid-cols-6">
           {images
@@ -31,7 +31,7 @@ export const ImageGrid = () => {
                     alt={image.caption}
                     src={image.media_url}
                     fill
-                    sizes="(max-width: 440px), 20vw"
+                    sizes="(max-width: 440px) 50vw, 440px"
                     className="group-hover:opacity-75 object-cover"
                   />
                 </div>

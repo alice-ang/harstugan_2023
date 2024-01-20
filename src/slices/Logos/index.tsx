@@ -15,7 +15,7 @@ const Logos = ({ slice }: LogosProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-palette-cream py-12"
+      className="bg-palette-cream py-12 overflow-x-hidden"
     >
       <p className="uppercase text-palette-dark pb-8 text-center font-semibold text-sm">
         {slice.primary.title}
@@ -35,7 +35,7 @@ const Logos = ({ slice }: LogosProps): JSX.Element => {
           ))}
         </ul>
         <ul
-          className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+          className=" flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
           aria-hidden="true"
         >
           {slice.items.map((item, index) => (

@@ -1,7 +1,7 @@
 <div align="center">
 
   <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Awesome Readme Template</h1>
+  <h1>Hårstugan</h1>
   
   <p>
     An awesome README template for your projects! 
@@ -26,14 +26,10 @@
 </p>
    
 <h4>
-    <a href="https://github.com/alice-ang/harstugan_2023/">View Demo</a>
+    <a href="https://harstugan-2023.vercel.app/">View Demo</a>
   <span> · </span>
     <a href="https://github.com/alice-ang/harstugan_2023">Documentation</a>
-  <span> · </span>
-    <a href="https://github.com/alice-ang/harstugan_2023/issues/">Report Bug</a>
-  <span> · </span>
-    <a href="https://github.com/alice-ang/harstugan_2023/issues/">Request Feature</a>
-  </h4>
+  
 </div>
 
 <br />
@@ -45,23 +41,7 @@
 - [About the Project](#star2-about-the-project)
   - [Screenshots](#camera-screenshots)
   - [Tech Stack](#space_invader-tech-stack)
-  - [Features](#dart-features)
   - [Color Reference](#art-color-reference)
-  - [Environment Variables](#key-environment-variables)
-- [Getting Started](#toolbox-getting-started)
-  - [Prerequisites](#bangbang-prerequisites)
-  - [Installation](#gear-installation)
-  - [Running Tests](#test_tube-running-tests)
-  - [Run Locally](#running-run-locally)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [Usage](#eyes-usage)
-- [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-  - [Code of Conduct](#scroll-code-of-conduct)
-- [FAQ](#grey_question-faq)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
 
 <!-- About the Project -->
 
@@ -77,10 +57,8 @@
 
 <!-- TechStack -->
 
-### :space_invader: Tech Stack
+### :space_invader: Tech Used
 
-<details>
-  <summary>Client</summary>
   <ul>
     <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
     <li><a href="https://nextjs.org/">Next.js</a></li>
@@ -91,15 +69,13 @@
     <li><a href="    https://developers.facebook.com/docs/instagram-basic-display-api/">Instagram Basic Display API</a></li>
 
   </ul>
-</details>
-
-<!-- Features -->
-
+  
 ### :art: Color Reference
 
-| Color           | Hex                                                              |
-| --------------- | ---------------------------------------------------------------- |
-| Primary Color   | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color    | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color      | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+| Color | Hex                                                              |
+| ----- | ---------------------------------------------------------------- |
+| Gold  | ![#C19A5D](https://via.placeholder.com/10/C19A5D?text=+) #C19A5D |
+| Brown | ![#A5836A](https://via.placeholder.com/10/A5836A?text=+) #A5836A |
+| Cream | ![#F4EDE6](https://via.placeholder.com/10/F4EDE6?text=+) #F4EDE6 |
+| Grey  | ![#B3B3B3](https://via.placeholder.com/10/B3B3B3?text=+) #B3B3B3 |
+| Dark  | ![#B3B3B3](https://via.placeholder.com/10/070F12?text=+) #070F12 |

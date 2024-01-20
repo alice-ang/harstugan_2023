@@ -48,7 +48,7 @@ export const Footer = async () => {
               </p>
             ))}
           </div>
-          <div className="order-3 flex flex-col space-y-4  col-span-3 md:col-span-1 ">
+          <div className="order-3 flex flex-col space-y-4 col-span-3 md:col-span-1 ">
             {footer.data.logos.map((image, index) => (
               <div key={index} className="">
                 <Image

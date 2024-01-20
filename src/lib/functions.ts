@@ -46,3 +46,23 @@ export const renderIcon = ({
       break;
   }
 };
+export type InstagramImage = {
+  id: string;
+  caption: string;
+  media_type: string;
+  media_url: string;
+  permalink: string;
+  timestamp: string;
+};
+
+export const getImages = async (): Promise<InstagramImage[]> => {
+  const response = await fetch(
+    `https://graph.instagram.com/v12.0/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_KEY}&limit=10`
+  );
+  const res = await response.json();
+  const images = res.data.filter(
+    (image: InstagramImage) => image.media_type === "IMAGE"
+  );
+
+  return images.slice(0, 5);
+};

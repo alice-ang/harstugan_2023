@@ -6,7 +6,8 @@ import { classNames } from "@/lib/functions";
 import { FaImage, FaInstagram } from "react-icons/fa";
 
 import { useQuery } from "@tanstack/react-query";
-import Link from "next/link";
+import { H } from "./H";
+import { SkeletonImage } from ".";
 
 type InstagramImage = {
   id: string;
@@ -18,13 +19,13 @@ type InstagramImage = {
 };
 export const getImages = async (): Promise<InstagramImage[]> => {
   const response = await fetch(
-    `https://graph.instagram.com/v12.0/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_KEY}`
+    `https://graph.instagram.com/v12.0/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_KEY}&limit=10`
   );
   const res = await response.json();
   const images = res.data.filter(
     (image: InstagramImage) => image.media_type === "IMAGE"
   );
-  console.log(images);
+
   return images.slice(0, 5);
 };
 
@@ -40,9 +41,7 @@ export const ImageGrid = () => {
         <div className="grid grid-cols-1 gap-2 md:grid-cols-6">
           {images
             ? images.map((image, index) => (
-                <a
-                  href={image.permalink}
-                  target="_blank"
+                <div
                   className={classNames(
                     "aspect-square bg-gray-200 rounded-lg overflow-hidden  col-span-1 md:col-span-2 relative"
                   )}
@@ -52,36 +51,34 @@ export const ImageGrid = () => {
                     alt={image.caption}
                     src={image.media_url}
                     fill
+                    sizes="(max-width: 440px), 20vw"
                     className="group-hover:opacity-75 object-cover"
                   />
-                </a>
+                </div>
               ))
-            : [0, 1, 2, 3, 4].map((index) => (
-                <div
-                  key={index}
-                  className=" p-4 h-full w-full bg-gray-200 aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 "
-                >
-                  <div className="flex justify-center items-center h-full w-full border animate-pulse rounded-lg">
-                    <FaImage color="grey" size={100} />
+            : [0, 1, 2, 3, 4].map((index) => <SkeletonImage key={index} />)}
+
+          {images ? (
+            <a
+              href="https://www.instagram.com/harstugan/"
+              target="_blank"
+              className=" p-4 h-full w-full bg-palette-dark aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 "
+            >
+              <div className="flex justify-center items-center h-full w-full uppercase">
+                <div className="space-y-6 flex flex-col items-center justify-center">
+                  <h3 className="text-white text-center text-6xl font-semibold">
+                    Följ oss
+                  </h3>
+                  <div className="bg-white h-10 w-10 p-1 rounded-full flex justify-center items-center">
+                    <H />
+                    <FaInstagram size={22} />
                   </div>
                 </div>
-              ))}
-          <a
-            href="https://www.instagram.com/harstugan/"
-            target="_blank"
-            className=" p-4 h-full w-full bg-palette-dark aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 "
-          >
-            <div className="flex justify-center items-center h-full w-full uppercase">
-              <div className="space-y-4 flex flex-col items-center justify-center">
-                <h3 className="text-white text-center text-6xl font-semibold">
-                  Följ oss
-                </h3>
-                <div className="bg-white h-10 w-10 p-1 rounded-full flex justify-center items-center">
-                  <FaInstagram size={22} />
-                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          ) : (
+            <SkeletonImage />
+          )}
         </div>
       </Constraints>
     </section>

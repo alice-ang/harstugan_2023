@@ -66,9 +66,10 @@ Website for Hårstugan i Nora
 
 ### :art: Color Reference
 
-| Color           | Hex                                                              |
-| --------------- | ---------------------------------------------------------------- |
-| Primary Color   | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color    | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color      | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+| Color | Hex                                                              |
+| ----- | ---------------------------------------------------------------- |
+| Gold  | ![#C19A5D](https://via.placeholder.com/10/C19A5D?text=+) #C19A5D |
+| Brown | ![#A5836A](https://via.placeholder.com/10/A5836A?text=+) #A5836A |
+| Cream | ![#F4EDE6](https://via.placeholder.com/10/F4EDE6?text=+) #F4EDE6 |
+| Grey  | ![#B3B3B3](https://via.placeholder.com/10/B3B3B3?text=+) #B3B3B3 |
+| Dark  | ![#070F12](https://via.placeholder.com/10/070F12?text=+) #070F12 |

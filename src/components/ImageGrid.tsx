@@ -39,11 +39,7 @@ export const ImageGrid = () => {
             : [0, 1, 2, 3, 4].map((index) => <SkeletonImage key={index} />)}
 
           {images ? (
-            <a
-              href="https://www.instagram.com/harstugan/"
-              target="_blank"
-              className=" p-4 h-full w-full bg-palette-dark aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 "
-            >
+            <div className=" p-4 h-full w-full bg-palette-dark aspect-square rounded-lg overflow-hidden  col-span-1 md:col-span-2 ">
               <div className="flex justify-center items-center h-full w-full uppercase">
                 <div className="space-y-6 flex flex-col items-center justify-center">
                   <h3 className="text-white text-center text-6xl font-semibold">
@@ -51,11 +47,16 @@ export const ImageGrid = () => {
                   </h3>
                   <div className="bg-white h-10 w-10 p-1 rounded-full flex justify-center items-center">
                     <H />
-                    <FaInstagram size={22} />
+                    <a
+                      href="https://www.instagram.com/harstugan/"
+                      target="_blank"
+                    >
+                      <FaInstagram size={22} />
+                    </a>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           ) : (
             <SkeletonImage />
           )}

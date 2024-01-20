@@ -1,4 +1,4 @@
-import { H } from "@/components";
+import { Constraints, H } from "@/components";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
@@ -23,7 +23,8 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
       <div
         className={`rounded-full h-[140px] w-[140px]  2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-white absolute 2xl:-top-[140px] 2xl:-right-[140px] -top-[70px] -right-[70px]`}
       />
-      <div className="mx-auto md:w-1/2 xl:w-1/4 w-full">
+
+      <div className=" max-w-7xl mx-auto w-full">
         <h3 className="text-white text-center text-6xl">
           {slice.primary.heading}
         </h3>
@@ -32,7 +33,10 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
         </p>
         <div className="space-y-8 py-6">
           {slice.items.map((price, index) => (
-            <div className="flex justify-between" key={index}>
+            <div
+              className="flex justify-between border-b border-palette-light border-opacity-30 py-2"
+              key={index}
+            >
               <p className="uppercase text-white text-xl">{price.product}</p>
               <span className="text-palette-light">{price.price}kr</span>
             </div>

@@ -11,11 +11,10 @@ export const Footer = async () => {
 
   const footer = await client.getSingle("footer");
   const settings = await client.getSingle("settings");
-  console.log(footer.data.logos);
   return (
     <footer className="bg-black">
       <Constraints>
-        <div className="py-16 grid grid-cols-3">
+        <div className="px-4 md:px-0 py-16 grid grid-cols-3">
           <div className="order-2 my-8 md:m-0 md:order-1 col-span-3 md:col-span-1 ">
             <Logo />
 

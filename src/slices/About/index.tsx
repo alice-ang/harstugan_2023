@@ -3,7 +3,8 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { createClient } from "@/prismicio";
-import { ring, ringSmall } from "@/lib/variables";
+import { foundedDate, ring, ringSmall } from "@/lib/variables";
+import { calculateYearsBetween } from "@/lib/functions";
 
 /**
  * Props for `About`.
@@ -30,7 +31,11 @@ const About = ({ slice }: AboutProps): JSX.Element => {
             <p className="text-xl text-palette-gold pb-6 uppercase">
               {slice.primary.overline}
             </p>
-            <h3 className="text-5xl text-white">{slice.primary.heading}</h3>
+            <h3 className="text-5xl text-white">
+              Hårstugan fyller{" "}
+              {calculateYearsBetween(foundedDate, new Date().getFullYear())} år
+              {/* {slice.primary.heading} */}
+            </h3>
             <p className="text-palette-light pt-4">{slice.primary.text}</p>
           </div>
 

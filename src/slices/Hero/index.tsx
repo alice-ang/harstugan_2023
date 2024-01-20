@@ -1,5 +1,6 @@
 "use client";
 import { Constraints } from "@/components";
+import { foundedDate } from "@/lib/variables";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -34,7 +35,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
       <div className="backdrop-blur-md bg-black/40 py-24 px-6 h-full flex flex-col justify-center">
         <Constraints>
-          <div className="grid grid-cols-2 pt-8">
+          <div className="grid grid-cols-2 md:pt-8">
             <div className="col-span-1" />
             <div className="space-y-8 w-full col-span-2 md:col-span-1">
               <div className="space-y-3">
@@ -47,20 +48,27 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               </div>
               <hr className="w-1/3 md:w-[180px]" />
               <p className="uppercase text-palette-white pb-2 font-semibold text-sm">
-                {slice.primary.subtitle}
+                Verksam sedan {foundedDate}
+                {/* {slice.primary.subtitle} */}
               </p>
               {slice.items.length > 1 && (
                 <div className="space-x-4">
                   <button
                     className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
-                    onClick={() => (idx == 0 ? setIdx(0) : setIdx(idx - 1))}
+                    onClick={() =>
+                      idx == 0
+                        ? setIdx(slice.items.length - 1)
+                        : setIdx(idx - 1)
+                    }
                   >
                     <FaChevronLeft size={16} color="white" />
                   </button>
                   <button
                     className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
                     onClick={() =>
-                      idx === slice.items.length - 1 ? null : setIdx(idx + 1)
+                      idx === slice.items.length - 1
+                        ? setIdx(0)
+                        : setIdx(idx + 1)
                     }
                   >
                     <FaChevronRight size={16} color="white" />

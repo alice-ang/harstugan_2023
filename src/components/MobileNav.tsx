@@ -17,7 +17,9 @@ export const MobileNav: FC<MobileNavProps> = ({ links }) => {
   return (
     <>
       <button
-        className="block md:hidden p-2 rounded bg-palette-dark border border-palette-white "
+        className={classNames(
+          "block md:hidden p-2 rounded bg-palette-dark border border-palette-white"
+        )}
         onClick={() => setIsOpen(!isOpen)}
       >
         <GiHamburgerMenu size={24} color="white" />
@@ -25,6 +27,7 @@ export const MobileNav: FC<MobileNavProps> = ({ links }) => {
       <nav
         className={classNames(
           isOpen ? "h-screen block" : "h-0 hidden",
+
           "w-full flex flex-col bg-palette-dark fixed top-0 left-0 p-4"
         )}
       >

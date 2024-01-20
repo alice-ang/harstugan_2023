@@ -25,8 +25,6 @@ Website for Hårstugan i Nora
    
 <h4>
     <a href="https://harstugan-2023.vercel.app/">View Demo</a>
-  <span> · </span>
-    <a href="https://github.com/alice-ang/harstugan_2023">Documentation</a>
 
 </div>
 
@@ -36,22 +34,17 @@ Website for Hårstugan i Nora
 
 # :notebook_with_decorative_cover: Table of Contents
 
-- [About the Project](#star2-about-the-project)
 - [Screenshots](#camera-screenshots)
 - [Tech Stack](#space_invader-tech-stack)
 - [Features](#dart-features)
 - [Color Reference](#art-color-reference)
-
-<!-- About the Project -->
-
-## :star2: About the Project
 
 <!-- Screenshots -->
 
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://alice-ang.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fj2bxdvs7%2Fproduction%2Ff11ea2601fb9040be1f4d3ca14be0a01805a291b-1542x1080.png&w=3840&q=75" alt="screenshot" />
 </div>
 
 <!-- TechStack -->

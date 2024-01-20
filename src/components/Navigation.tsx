@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Constraints } from "./Constraints";
 import Link from "next/link";
@@ -13,7 +12,7 @@ export const Navigation = ({
   settings: SettingsDocument<string>;
 }) => {
   return (
-    <nav className={classNames("p-4 md:fixed sticky top-0 z-10 w-full")}>
+    <nav className={classNames("p-4 fixed md:absolute  top-0 z-10 w-full")}>
       <Constraints>
         <div className="flex justify-between items-center">
           <Logo />

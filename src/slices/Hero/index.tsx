@@ -1,5 +1,6 @@
 "use client";
 import { Constraints } from "@/components";
+import { foundedDate } from "@/lib/variables";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -47,7 +48,8 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               </div>
               <hr className="w-1/3 md:w-[180px]" />
               <p className="uppercase text-palette-white pb-2 font-semibold text-sm">
-                {slice.primary.subtitle}
+                Verksam sedan {foundedDate}
+                {/* {slice.primary.subtitle} */}
               </p>
               {slice.items.length > 1 && (
                 <div className="space-x-4">

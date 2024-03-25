@@ -17,10 +17,13 @@
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.3",
     "@tanstack/react-query": "^5.14.1",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.20",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.31",

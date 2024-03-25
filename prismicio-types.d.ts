@@ -217,6 +217,59 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Price → price*
+ */
+export interface PriceDocumentDataPriceItem {
+  /**
+   * title field in *Price → price*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price.price[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * cost field in *Price → price*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price.price[].cost
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cost: prismic.KeyTextField;
+}
+
+/**
+ * Content for Price documents
+ */
+interface PriceDocumentData {
+  /**
+   * price field in *Price*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price.price[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  price: prismic.GroupField<Simplify<PriceDocumentDataPriceItem>>;
+}
+
+/**
+ * Price document from Prismic
+ *
+ * - **API ID**: `price`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PriceDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<PriceDocumentData>, "price", Lang>;
+
+/**
  * Item in *Settings → Navigation*
  */
 export interface SettingsDocumentDataNavigationItem {
@@ -379,6 +432,7 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | FooterDocument
   | HomepageDocument
+  | PriceDocument
   | SettingsDocument;
 
 /**
@@ -810,16 +864,6 @@ export interface PricesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   extra: prismic.KeyTextField;
-
-  /**
-   * Section id field in *Prices → Primary*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: prices.primary.section_id
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  section_id: prismic.ContentRelationshipField<"section_id">;
 }
 
 /**
@@ -827,7 +871,7 @@ export interface PricesSliceDefaultPrimary {
  */
 export interface PricesSliceDefaultItem {
   /**
-   * Product field in *Prices → Items*
+   * product field in *Prices → Items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -837,14 +881,14 @@ export interface PricesSliceDefaultItem {
   product: prismic.KeyTextField;
 
   /**
-   * Price field in *Prices → Items*
+   * cost field in *Prices → Items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: prices.items[].price
+   * - **API ID Path**: prices.items[].cost
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  price: prismic.KeyTextField;
+  cost: prismic.KeyTextField;
 }
 
 /**
@@ -947,6 +991,9 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      PriceDocument,
+      PriceDocumentData,
+      PriceDocumentDataPriceItem,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,

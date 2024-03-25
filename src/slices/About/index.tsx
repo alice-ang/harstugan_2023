@@ -17,7 +17,7 @@ export type AboutProps = SliceComponentProps<Content.AboutSlice>;
 const About = ({ slice }: AboutProps): JSX.Element => {
   return (
     <section
-      className=" bg-palette-dark relative overflow-hidden"
+      className=" bg-palette-dark relative overflow-hidden "
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       id="about"
@@ -27,7 +27,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       />
       <Constraints>
         <div className="grid grid-cols-2 gap-4 ">
-          <div className="col-span-2 md:col-span-1 py-16 px-4 relative">
+          <div className="col-span-2 md:col-span-1 py-24 px-4 relative">
             <p className="text-xl text-palette-gold pb-6 uppercase">
               {slice.primary.overline}
             </p>
@@ -43,10 +43,9 @@ const About = ({ slice }: AboutProps): JSX.Element => {
             <Image
               src={slice.primary.image.url ?? ""}
               alt={slice.primary.image.alt ?? "Hårstugan"}
-              style={{ objectFit: "cover" }}
               fill
               sizes="100vw"
-              className="w-full h-full top-0 left-0 object-cover"
+              className="aspect-video object-cover "
             />
           </div>
         </div>

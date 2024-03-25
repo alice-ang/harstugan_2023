@@ -17,13 +17,6 @@
 				"__TYPE__": "FieldContent",
 				"value": "hundred",
 				"type": "Text"
-			},
-			"section_id": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
 			}
 		},
 		"items": [
@@ -34,15 +27,15 @@
 						"product",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "unit",
+							"value": "clothes",
 							"type": "Text"
 						}
 					],
 					[
-						"price",
+						"cost",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "engine",
+							"value": "definition",
 							"type": "Text"
 						}
 					]

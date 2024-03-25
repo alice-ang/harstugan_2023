@@ -1,0 +1,33 @@
+{
+  "id": "price",
+  "label": "Price",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "price": {
+        "type": "Group",
+        "config": {
+          "label": "price",
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "cost": {
+              "type": "Text",
+              "config": {
+                "label": "cost",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

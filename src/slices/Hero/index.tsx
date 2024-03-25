@@ -1,5 +1,4 @@
 "use client";
-import { Constraints } from "@/components";
 import { foundedDate } from "@/lib/variables";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
@@ -20,7 +19,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
   return (
     <section
-      className="w-full h-[640px] relative bg-palette-dark"
+      className=" relative bg-palette-dark "
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -28,56 +27,48 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         src={slice.items[idx].image.url ?? ""}
         alt={slice.items[idx].image.alt ?? "hero image"}
         key={slice.items[idx].image.id}
-        style={{ objectFit: "cover" }}
         fill
-        className="w-full h-full top-0 left-0 object-cover"
+        className="object-cover bg-center  h-full"
       />
-
-      <div className="backdrop-blur-sm bg-black/40 py-24 px-6 h-full flex flex-col justify-center">
-        <Constraints>
-          <div className="grid grid-cols-2 md:pt-8">
-            <div className="col-span-1" />
-            <div className="space-y-8 w-full col-span-2 md:col-span-1">
-              <div className="space-y-3">
-                <h2 className="uppercase text-5xl md:text-6xl text-white">
-                  {slice.items[idx].title}
-                </h2>
-                <p className=" text-base text-palette-white pb-2">
-                  {slice.items[idx].text}
-                </p>
-              </div>
-              <hr className="w-1/3 md:w-[180px]" />
-              <p className="uppercase text-palette-white pb-2 font-semibold text-sm">
-                Verksam sedan {foundedDate}
-                {/* {slice.primary.subtitle} */}
+      <div className="grid grid-cols-6 aspect-video">
+        <div className="col-span-6 xl:col-span-4 hidden xl:block"></div>
+        <div className="col-span-6 xl:col-span-2 backdrop-blur bg-black/40 px-12 min-h-[50vh]">
+          <div className="space-y-8 bottom-20 absolute ">
+            <div className="space-y-3">
+              <h2 className="uppercase text-5xl md:text-6xl text-white">
+                {slice.items[idx].title}
+              </h2>
+              <p className=" text-base text-palette-white pb-2">
+                {slice.items[idx].text}
               </p>
-              {slice.items.length > 1 && (
-                <div className="space-x-4">
-                  <button
-                    className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
-                    onClick={() =>
-                      idx == 0
-                        ? setIdx(slice.items.length - 1)
-                        : setIdx(idx - 1)
-                    }
-                  >
-                    <FaChevronLeft size={16} color="white" />
-                  </button>
-                  <button
-                    className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
-                    onClick={() =>
-                      idx === slice.items.length - 1
-                        ? setIdx(0)
-                        : setIdx(idx + 1)
-                    }
-                  >
-                    <FaChevronRight size={16} color="white" />
-                  </button>
-                </div>
-              )}
             </div>
+            <hr className="w-1/3 md:w-[180px]" />
+            <p className="uppercase text-palette-white pb-2 font-semibold text-sm">
+              Verksam sedan {foundedDate}
+              {/* {slice.primary.subtitle} */}
+            </p>
+            {slice.items.length > 1 && (
+              <div className="space-x-4">
+                <button
+                  className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
+                  onClick={() =>
+                    idx == 0 ? setIdx(slice.items.length - 1) : setIdx(idx - 1)
+                  }
+                >
+                  <FaChevronLeft size={16} color="white" />
+                </button>
+                <button
+                  className="bg-palette-brown p-4 border border-palette-brown transition ease-in-out delay-150 hover:bg-palette-gold"
+                  onClick={() =>
+                    idx === slice.items.length - 1 ? setIdx(0) : setIdx(idx + 1)
+                  }
+                >
+                  <FaChevronRight size={16} color="white" />
+                </button>
+              </div>
+            )}
           </div>
-        </Constraints>
+        </div>
       </div>
     </section>
   );

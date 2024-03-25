@@ -22,7 +22,7 @@ export const ImageGrid = () => {
             ? images.map((image, index) => (
                 <div
                   className={classNames(
-                    "aspect-square bg-gray-200 overflow-hidden rounded col-span-1 md:col-span-2 relative"
+                    "aspect-square bg-gray-200 overflow-hidden rounded col-span-1 md:col-span-2 relative border"
                   )}
                   key={image.id}
                 >

@@ -65,16 +65,16 @@ export const Footer = async () => {
         </div>
         <div className="flex flex-row justify-center items-center sflex-wrap p-6 space-x-4 text-palette-light">
           <p className="text-center  uppercase text-xs">
-            &copy; {`${getCurrentYear()}`} {footer.data.copyright} |
+            &copy; {`${getCurrentYear()}`} {footer.data.copyright} | Utvecklad
+            med ♥️{" "}
+            <a
+              className="text-center uppercase text-xs"
+              href="https://www.linkedin.com/in/alice-anglesj%C3%B6-9503121a7/"
+              target="_blank"
+            >
+              av Alice A
+            </a>
           </p>
-
-          <a
-            className="text-center uppercase text-xs"
-            href="https://www.linkedin.com/in/alice-anglesj%C3%B6-9503121a7/"
-            target="_blank"
-          >
-            Utvecklad med ♥️ av Alice A
-          </a>
         </div>
       </Constraints>
     </footer>

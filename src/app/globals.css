@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply bg-black;
+    @apply scroll-smooth;
+  }
+}
+
 p,
 li,
 a {

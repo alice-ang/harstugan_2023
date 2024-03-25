@@ -41,8 +41,8 @@ export default function RootLayout({
         <body
           className={`${cormorant.variable} ${allura.variable} ${montserrat.variable} font-sans `}
         >
-          {children}
           <Navigation settings={settings} />
+          {children}
           <BackToTop />
           <PrismicPreview repositoryName={repositoryName} />
           <Footer />

@@ -20,10 +20,6 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
     >
       <H />
 
-      <div
-        className={`rounded-full h-[140px w-[140px] 2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-white absolute 2xl:-top-[140px] 2xl:-right-[140px] -top-[70px] -right-[70px]`}
-      />
-
       <div className=" max-w-2xl  mx-auto w-full">
         <h3 className="text-white text-center text-6xl">
           {slice.primary.heading}
@@ -38,7 +34,7 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
               key={index}
             >
               <p className="uppercase text-white text-xl">{price.product}</p>
-              <span className="text-palette-light">{price.price}kr</span>
+              <span className="text-palette-light">{price.cost} kr</span>
             </div>
           ))}
         </div>
@@ -46,6 +42,9 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
           {slice.primary.extra}
         </p>
       </div>
+      <div
+        className={`rounded-full h-[140px] w-[140px]  2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-white absolute 2xl:-top-[140px] 2xl:-right-[140px] -top-[70px] -right-[70px]`}
+      />
     </section>
   );
 };

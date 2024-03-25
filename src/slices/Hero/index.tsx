@@ -30,9 +30,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         fill
         className="object-cover bg-center  h-full"
       />
-      <div className="grid grid-cols-6 aspect-video">
-        <div className="col-span-6 xl:col-span-4 hidden xl:block"></div>
-        <div className="col-span-6 xl:col-span-2 backdrop-blur bg-black/40 px-12 min-h-[50vh]">
+      <div className="grid grid-cols-12">
+        <div className="col-span-12 xl:col-span-7 hidden xl:block"></div>
+        <div className="col-span-12 xl:col-span-5 backdrop-blur bg-black/40 px-4 md:px-12 min-h-[50vh]">
           <div className="space-y-8 bottom-20 absolute ">
             <div className="space-y-3">
               <h2 className="uppercase text-5xl md:text-6xl text-white">
@@ -44,7 +44,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             </div>
             <hr className="w-1/3 md:w-[180px]" />
             <p className="uppercase text-palette-white pb-2 font-semibold text-sm">
-              Verksam sedan {foundedDate}
+              Verksamma sedan {foundedDate}
               {/* {slice.primary.subtitle} */}
             </p>
             {slice.items.length > 1 && (

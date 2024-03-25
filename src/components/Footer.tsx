@@ -28,14 +28,14 @@ export const Footer = async () => {
                 href="https://www.facebook.com/profile.php?id=100040185922018"
                 target="_blank"
               >
-                <FaFacebook size={18} />
+                <FaFacebook size={20} />
               </a>
               <a
                 className="bg-white w-fit p-1 rounded-full"
                 href="https://www.instagram.com/harstugan/"
                 target="_blank"
               >
-                <FaInstagram size={18} />
+                <FaInstagram size={20} />
               </a>
             </div>
           </div>

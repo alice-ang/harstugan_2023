@@ -19,7 +19,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
   return (
     <section
-      className=" relative bg-palette-dark "
+      className="relative bg-palette-dark "
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -28,12 +28,12 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         alt={slice.items[idx].image.alt ?? "hero image"}
         key={slice.items[idx].image.id}
         fill
-        className="object-cover bg-center  h-full"
+        className="object-cover bg-center h-full"
       />
       <div className="grid grid-cols-12 h-[800px] md:h-[60vh]">
         <div className="col-span-12 xl:col-span-7 hidden xl:block"></div>
         <div className="col-span-12 xl:col-span-5 backdrop-blur bg-black/40 px-4 md:px-12 min-h-[50vh]">
-          <div className="space-y-8 bottom-20 absolute ">
+          <div className="space-y-8 bottom-20 absolute">
             <div className="space-y-3">
               <h2 className="uppercase text-5xl md:text-6xl text-white">
                 {slice.items[idx].title}
@@ -44,8 +44,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             </div>
             <hr className="w-1/3 md:w-[180px]" />
             <p className="uppercase text-palette-white pb-2 font-semibold text-sm">
-              Verksamma sedan {foundedDate}
-              {/* {slice.primary.subtitle} */}
+              {slice.primary.subtitle}
             </p>
             {slice.items.length > 1 && (
               <div className="space-x-4">

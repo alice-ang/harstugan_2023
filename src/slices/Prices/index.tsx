@@ -34,7 +34,7 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
               key={index}
             >
               <p className="uppercase text-white text-xl">{price.product}</p>
-              <span className="text-palette-light">{price.cost}kr</span>
+              <span className="text-palette-light">{price.cost} kr</span>
             </div>
           ))}
         </div>

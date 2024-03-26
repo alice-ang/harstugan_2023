@@ -27,7 +27,7 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
         <p className="uppercase text-palette-light text-center pt-4">
           {slice.primary.subtitle}
         </p>
-        <div className="space-y-8 py-6">
+        {/* <div className="space-y-8 py-6">
           {slice.items.map((price, index) => (
             <div
               className="flex justify-between border-b border-palette-light border-opacity-30 py-2"
@@ -37,10 +37,13 @@ const Prices = ({ slice }: PricesProps): JSX.Element => {
               <span className="text-palette-light">{price.cost} kr</span>
             </div>
           ))}
-        </div>
-        <p className="uppercase text-palette-light text-center">
-          {slice.primary.extra}
-        </p>
+        </div> */}
+
+        {slice.primary.extra && (
+          <p className="uppercase text-palette-light text-center">
+            {slice.primary.extra}
+          </p>
+        )}
       </div>
       <div
         className={`rounded-full h-[140px] w-[140px]  2xl:h-[280px] 2xl:w-[280px] border-4 border-palette-white absolute 2xl:-top-[140px] 2xl:-right-[140px] -top-[70px] -right-[70px]`}

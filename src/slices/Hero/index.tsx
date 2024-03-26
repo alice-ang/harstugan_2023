@@ -30,7 +30,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         fill
         className="object-cover bg-center h-full"
       />
-      <div className="grid grid-cols-12 h-[800px] md:h-[60vh]">
+      <div className="grid grid-cols-12 min-h-[800px] md:h-[80vh]">
         <div className="col-span-12 xl:col-span-7 hidden xl:block"></div>
         <div className="col-span-12 xl:col-span-5 backdrop-blur bg-black/40 px-4 md:px-12 min-h-[50vh]">
           <div className="space-y-8 bottom-20 absolute">

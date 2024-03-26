@@ -22,7 +22,7 @@ export const ImageGrid = () => {
             ? images.map((image, index) => (
                 <div
                   className={classNames(
-                    "aspect-square bg-gray-200 overflow-hidden rounded col-span-1 md:col-span-2 relative border"
+                    "aspect-square bg-gray-200 overflow-hidden rounded col-span-1 md:col-span-2 relative border "
                   )}
                   key={image.id}
                 >
@@ -32,7 +32,7 @@ export const ImageGrid = () => {
                       src={image.media_url}
                       fill
                       sizes="(max-width: 440px) 50vw, 440px"
-                      className="group-hover:opacity-75 object-cover aspect-square"
+                      className="group-hover:opacity-75 object-cover aspect-square hover:scale-110 transition-all ease-in-out duration-200"
                     />
                   </a>
                 </div>

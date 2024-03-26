@@ -39,7 +39,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
             <p className="text-palette-light pt-4">{slice.primary.text}</p>
           </div>
 
-          <div className="col-span-2 md:col-span-1  relative aspect-video md:aspect-auto">
+          <div className="col-span-2 md:col-span-1 relative aspect-square md:aspect-auto">
             <Image
               src={slice.primary.image.url ?? ""}
               alt={slice.primary.image.alt ?? "Hårstugan"}

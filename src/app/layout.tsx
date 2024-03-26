@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import TanStackProvider from "../../providers/TanStackProvider";
 import { montserrat, cormorant, allura } from "@/lib/fonts";
 import { PrismicPreview } from "@prismicio/next";

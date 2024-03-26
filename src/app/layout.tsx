@@ -7,6 +7,7 @@ import { repositoryName } from "@/prismicio";
 import { BackToTop, Footer, Navigation } from "@/components";
 import { createClient } from "@/prismicio";
 import { use } from "react";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -38,6 +39,15 @@ export default function RootLayout({
   return (
     <TanStackProvider>
       <html lang="en">
+        <head>
+          <Script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="d3b94682-6b8e-47c4-9c9e-c4c8b3084050"
+            data-blockingmode="auto"
+            type="text/javascript"
+          />
+        </head>
         <body
           className={`${cormorant.variable} ${allura.variable} ${montserrat.variable} font-sans `}
         >

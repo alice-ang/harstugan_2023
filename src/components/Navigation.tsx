@@ -11,6 +11,7 @@ export const Navigation = ({
 }: {
   settings: SettingsDocument<string>;
 }) => {
+  console.log(settings.data.navigation);
   return (
     <nav
       className={classNames(
@@ -26,6 +27,7 @@ export const Navigation = ({
               passHref
               className="uppercase font-semibold hover:text-palette-gold"
               key={nav.label}
+              as={"li"}
             >
               {nav.label}
             </Link>
@@ -41,10 +43,3 @@ export const Navigation = ({
     </nav>
   );
 };
-
-// async function getSettings() {
-//   const client = createClient();
-//   const settings = await client.getSingle("settings");
-
-//   return settings;
-// }

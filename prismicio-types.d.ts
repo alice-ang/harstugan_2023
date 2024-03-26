@@ -274,16 +274,6 @@ export type PriceDocument<Lang extends string = string> =
  */
 export interface SettingsDocumentDataNavigationItem {
   /**
-   * Link field in *Settings → Navigation*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.navigation[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
    * Label field in *Settings → Navigation*
    *
    * - **Field Type**: Text

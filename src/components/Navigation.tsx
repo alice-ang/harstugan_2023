@@ -27,7 +27,6 @@ export const Navigation = ({
               passHref
               className="uppercase font-semibold hover:text-palette-gold"
               key={nav.label}
-              as={"li"}
             >
               {nav.label}
             </Link>

@@ -6,6 +6,7 @@ const nextConfig = {
       "images.prismic.io",
       "bit.ly",
       "scontent.cdninstagram.com",
+      "scontent-arn2-1.cdninstagram.com",
     ],
   },
 };
